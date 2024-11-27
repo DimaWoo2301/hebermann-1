@@ -64,6 +64,7 @@
      width: 286px;
     height: 270px;
     left: 0;
+    z-index: 1;
   }
   
   .home_main_video3::after{

@@ -108,6 +108,27 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
+    // Обработчик клика по SVG с ID "search"
+    $('#search').on('click', function () {
+        var url = $('base').attr('href') + 'index.php?route=product/search';
+
+        // Находим поле ввода внутри блока с классом "search"
+        var value = $('.search input[placeholder="Поиск по сайту"]').val();
+
+        if (value) {
+            url += '&search=' + encodeURIComponent(value);
+        }
+
+        location = url;
+    });
+
+    // Обработчик нажатия Enter в поле ввода
+    $('.search input[placeholder="Поиск по сайту"]').on('keydown', function (e) {
+        if (e.keyCode == 13) { // Проверяем нажатие Enter
+            $('#search').trigger('click'); // Имитируем клик на SVG
+        }
+    });
+
   // Кнопка "вверх"
   const buttonUp = document.getElementById("button_up_js");
   let lastScrollTop = 0;
@@ -133,4 +154,5 @@ document.addEventListener("DOMContentLoaded", () => {
           buttonUp.classList.remove("visible");
       }
   });
+
 });

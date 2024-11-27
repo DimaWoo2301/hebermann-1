@@ -1,0 +1,129 @@
+  
+  .footer {
+    width: 100%;
+    background-color: #272727;
+    color: #ffffff;
+    padding: 70px 0;
+    font-size: 15px;
+  }
+  
+  .footer_wrapper_content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer_wrapper_info {
+    max-width: 325px;
+    line-height: 26px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer_wrapper_info img {
+    width: 175px;
+    margin-bottom: 20px;
+    user-select: none;
+  }
+  
+  .footer_wrapper_links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .footer_wrapper_links a {
+    color: #ffffff;
+  }
+  
+  .footer_wrapper_nav {
+    display: flex;
+    width: 370px;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 50px;
+  }
+  
+  .footer_wrapper_nav a {
+    color: #ffffff;
+  }
+  
+  .footer_wrapper_container {
+    display: flex;
+    flex-grow: 0.5;
+    justify-content: space-between;
+  }
+  
+  .footer_wrapper_nav div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer_wrapper_nav li {
+    list-style-type: none;
+    margin-bottom: 15px;
+  }
+  
+  .footer_wrapper_nav :last-child {
+    margin-bottom: 0;
+  }
+  
+  .footer_wrapper_policy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .footer_wrapper_policy a {
+    color: #ffffff;
+  }
+  
+  .footer_wrapper_policy li {
+    list-style-type: none;
+    margin-bottom: 15px;
+  }
+  
+  .footer_wrapper_policy :last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 1500px) {
+    .footer {
+      padding: 50px 0;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .footer_wrapper_content {
+      flex-direction: column;
+    }
+    .footer_wrapper_nav {
+      margin-top: 40px;
+      margin-right: 0;
+      flex-grow: 0.5;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .footer_wrapper_container {
+      flex-direction: column;
+    }
+  
+    .footer_wrapper_nav {
+      flex-direction: column;
+      margin-top: 0;
+      width: 100%;
+    }
+  
+    .footer_wrapper_nav ul {
+      padding: 40px 0;
+    }
+  
+    .footer_wrapper_nav ul:last-child {
+      border-top: 1px solid #565656;
+      border-bottom: 1px solid #565656;
+      margin-bottom: 40px;
+    }
+    .footer_wrapper_nav li {
+      margin-bottom: 20px;
+    }
+  }
