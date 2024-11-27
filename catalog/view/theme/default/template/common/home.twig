@@ -1,0 +1,59 @@
+ {{ header }}
+<main style="position: relative" class="home">
+
+<div class="container">
+        <div class="home_main_image_video">
+          <div class="home_main_video1">
+            <video muted="" id="fridge-video1">
+              <source src="/image/catalog/videoHolodos.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="home_main_video2">
+            <video muted="" id="fridge-video2">
+              <source src="/image/catalog/videoPosudomoika.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="home_main_video3">
+            <video muted="" id="fridge-video3">
+              <source src="/image/catalog/videoMicrowave.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <div class="home_wrapper_category">
+            {% for category in categories %}
+                <a href="{{ category.href }}" class="home_category_block">
+                    <img src="{{ category.image }}" alt="{{ category.name }}">
+                    <div class="home_category_block_inside">
+                        <h2>{{ category.name }}</h2>
+                        <button>
+                            <span>Смотреть</span>
+                              <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 11.5L6 6.5L1 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                        </button>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+      <section class="section_ready_solution">
+        <div class="section_ready_solution_wrapper">
+           <div class="section_ready_solution_wrapper_image">{{ column_left }}</div>
+          <div class="section_ready_solution_wrapper_info">
+            
+          {{ content_top }}
+
+          {{ content_bottom }}
+          </div>
+        </div>
+      </section>
+
+
+
+        <section class="section_market">
+          {{ column_right }}
+        </section>
+      </div>
+
+</main>
+{{ footer }}

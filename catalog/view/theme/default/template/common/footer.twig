@@ -1,0 +1,80 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer_wrapper_content">
+      <div class="footer_wrapper_info">
+        <img
+          src="/image/catalog/logo_Hebermannpng_white.png"
+          alt="Логотип Heberman"
+        />
+        <span>
+          г. Санкт-Петербург, <br />
+          ул. Вербная 27 А, офис 622, 6 этаж,
+        </span>
+        <div class="footer_wrapper_links">
+          <a href="help@hebermann.ru">help@hebermann.ru</a>
+          <a href="tel:+78007755660">8 (800) 77-55-660</a>
+        </div>
+      </div>
+      <div class="footer_wrapper_container">
+        <div class="footer_wrapper_nav">
+          <ul>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="#">Сервис и гарантия</a>
+            </li>
+            <li>
+              <a href="#">Где купить</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">Вытяжки</a>
+            </li>
+            <li>
+              <a href="#">Варочные панели</a>
+            </li>
+            <li>
+              <a href="#">Духовые шкафы</a>
+            </li>
+            <li>
+              <a href="#">Холодильники</a>
+            </li>
+            <li>
+              <a href="#">Посудомойки</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_wrapper_policy">
+          <li>
+            <a href="#">Правовая информация</a>
+          </li>
+          <li>
+            <a href="#">Политика конфиденциальности</a>
+          </li>
+          <li>
+            <a href="#">Подписка Cookie</a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+{% for style in styles %}
+<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript" defer></script>
+{% endfor %}
+
+
+
+</body></html>

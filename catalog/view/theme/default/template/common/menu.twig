@@ -1,0 +1,64 @@
+<div id="modalCategory" class="modal_category">
+  <div class="container container_modal_mobile">
+    <div class="modal_category_content">
+      <span class="close_modal_category"></span>
+      {% if categories %}
+      <div id="toggleElementCategory" class="category_block">
+        <div id="categories" class="category_block_title">
+          <ul>
+            {% for category in categories %}
+            <li class="category {% if loop.index == 1 %}category_header_active{% endif %}" 
+                id="category-{{ category.id }}-category" 
+                data-target="subcategory-{{ category.id }}">
+              <span>{{ category.name }}</span>
+              <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg" style="stroke: black;">
+                <path d="M1 1.5L6 6.5L1 11.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="mobile_modal_links">
+            <ul>
+              <li><a href="../about/about.html">О бренде</a></li>
+              <li><a href="#">Сервис и гарантия</a></li>
+              <li><a href="../marketplace_buy/marketplace_buy.html">Где купить</a></li>
+              <li><a href="../contacts/contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="subcategories" class="category_block_subtitle">
+          {% for category in categories %}
+          <div class="subcategory_list" 
+               id="subcategory-{{ category.id }}" 
+               style="{% if loop.index == 1 %}display: block;{% else %}display: none;{% endif %}">
+            <ul>
+              {% if category.children %}
+              {% for child in category.children %}
+              <a href="{{ child.href }}">
+                <li>{{ child.name }}</li>
+              </a>
+              {% endfor %}
+              {% else %}
+              <a href="{{ category.href }}">
+                <li>{{ category.name }}</li>
+              </a>
+              {% endif %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      <div id="imageCategories">
+        {% for category in categories %}
+          <img
+              id="category-{{ category.id }}-image"
+              src="{{ category.image }}"
+              alt="{{ category.name }}"
+              style="{% if loop.index == 1 %}display: block;{% else %}display: none;{% endif %}"
+          />
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
