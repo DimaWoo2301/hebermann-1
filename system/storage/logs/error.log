@@ -1,0 +1,2 @@
+2024-11-25 9:15:34 - PHP Warning:  mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/user_lex1ru/data/www/test.hebermann.ru/system/library/db/mysqli.php on line 7
+2024-11-25 9:15:34 - PHP Warning:  mysqli::__construct(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/user_lex1ru/data/www/test.hebermann.ru/system/library/db/mysqli.php on line 7
