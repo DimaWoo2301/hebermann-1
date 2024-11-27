@@ -266,6 +266,7 @@ class ControllerProductCategory extends Controller {
 					'thumb'       => $image,
 					'images'      => $images,
 					'name'        => $result['name'],
+					'subname'     => $result['subname'],
 					'description' => utf8_substr(trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'))), 0, $this->config->get('theme_' . $this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $price,
 					'special'     => $special,

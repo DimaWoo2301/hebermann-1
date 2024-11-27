@@ -306,10 +306,12 @@
   .catalog_product_item_info :nth-child(2) {
     font-size: 20px;
     margin-bottom: 10px;
+    font-weight: 500;
   }
   
   .catalog_product_item_info :nth-child(3) {
     font-size: 25px;
+    font-weight: 500;
   }
 
   .local_swiper-pagination-bullet {

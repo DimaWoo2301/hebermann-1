@@ -36,6 +36,7 @@ $_['column_action']          = 'Действие';
 
 // Entry
 $_['entry_name']             = 'Название товара';
+$_['entry_subname'] = 'Подзаголовок модели';
 $_['entry_description']      = 'Описание';
 $_['entry_description_mini'] = 'Краткое Описание:';
 $_['entry_meta_title'] 	     = 'Мета-тег Title';

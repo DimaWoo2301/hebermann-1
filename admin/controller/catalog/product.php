@@ -1005,6 +1005,14 @@ class ControllerCatalogProduct extends Controller {
 			$data['model'] = '';
 		}
 
+		if (isset($this->request->post['subname'])) {
+			$data['subname'] = $this->request->post['subname'];
+		} elseif (!empty($product_info)) {
+			$data['subname'] = isset($product_info['subname']) ? $product_info['subname'] : '';
+		} else {
+			$data['subname'] = '';
+		}		
+
 		if (isset($this->request->post['sku'])) {
 			$data['sku'] = $this->request->post['sku'];
 		} elseif (!empty($product_info)) {
